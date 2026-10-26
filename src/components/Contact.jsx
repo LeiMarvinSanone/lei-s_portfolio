@@ -217,7 +217,7 @@ export default function Contact() {
                 className="btn-primary mt-6 w-full disabled:opacity-60 sm:w-auto"
               >
                 <Send size={16} aria-hidden="true" />
-                {site.formEndpoint ? 'Send Message' : 'Open in Email App'}
+                {site.formEndpoint ? 'Submit' : 'Open in Email App'}
               </button>
 
               <div role="status" aria-live="polite" className="mt-4 min-h-[1.5rem] text-sm">
