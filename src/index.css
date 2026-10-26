@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-bg font-sans text-ink antialiased;
+    overflow-x: hidden;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-ink;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .section {
+    @apply py-20 sm:py-28;
+  }
+
+  .section-eyebrow {
+    @apply mb-3 font-mono text-sm uppercase tracking-widest text-accent;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl;
+  }
+
+  .section-lead {
+    @apply mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-card transition duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-1 hover:border-accent/50 hover:shadow-glow;
+  }
+
+  .btn {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold transition duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent text-bg hover:bg-accent-soft hover:shadow-glow;
+  }
+
+  .btn-ghost {
+    @apply btn border border-line text-ink hover:border-accent hover:text-accent;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full border border-line bg-surface px-3 py-1 font-mono text-xs text-accent-soft;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(36, 67, 50, 0.35) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(36, 67, 50, 0.35) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+}
