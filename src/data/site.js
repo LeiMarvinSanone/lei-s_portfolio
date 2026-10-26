@@ -1,5 +1,4 @@
 // Edit this file to update your personal details. Every value marked
-// "PLACEHOLDER" should be replaced with your real information.
 
 export const site = {
   name: 'Lei Marvin H. Sanone', // PLACEHOLDER
@@ -16,7 +15,7 @@ export const site = {
 
   // Set this to a form service URL (for example a Formspree endpoint) to make
   // the contact form submit for real. Leave as null to use the mailto fallback.
-  formEndpoint: null,
+  formEndpoint: 'https://formspree.io/f/xrpppeye',
 }
 
 export const navLinks = [
