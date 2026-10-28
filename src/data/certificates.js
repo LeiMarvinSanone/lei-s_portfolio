@@ -41,22 +41,4 @@ export const certificates = [
     image: '/images/certificates/certificate_OJT.jpg',
     url: null,
   },
-  {
-    id: 5,
-    title: 'Placeholder Certificate Title',
-    issuer: 'Issuing Organization',
-    date: 'Month YYYY',
-    credentialId: null,
-    image: null,
-    url: null,
-  },
-  {
-    id: 6,
-    title: 'Placeholder Training Completion',
-    issuer: 'Training Provider',
-    date: 'Month YYYY',
-    credentialId: null,
-    image: null,
-    url: null,
-  },
 ]
